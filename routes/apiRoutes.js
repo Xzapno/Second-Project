@@ -257,18 +257,15 @@ module.exports = function(app)
     //tested using keys/env files and get unauthorized status response
     var client = new igdb("bb21f87f57037dd21618c694818fe183");
 
-    //capture the genre value from the link
-    var genre = req.params.id;
-
     client.games(
     {
       filters: 
       {
-          "genres": genre
+          "genres": req.params.id
       },
       limit: 50,
       //offset: 0,
-      order: "name:asc"
+      order: "first_release_date:desc"
     },
     [
       "name",
@@ -323,8 +320,8 @@ module.exports = function(app)
           }
           else
           {
-          //convert UNIX Epoch time to YYYY-MM-DD format
-          var releaseDate = moment.unix(response.body[d].first_release_date).format("YYYY-MM-DD");
+            //convert UNIX Epoch time to YYYY-MM-DD format
+            releaseDate = moment(response.body[d].first_release_date).format("YYYY-MM-DD");
           }
           if (response.body[d].screenshots == undefined)
           {
@@ -367,7 +364,7 @@ module.exports = function(app)
 
         }
 
-        //send the game object array (JSON) to the front end for rendering
+        //render the json data to the search.handlebars page
         res.render("search", {searchGameObject});
       }
     }
