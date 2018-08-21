@@ -279,37 +279,4 @@ module.exports = function (app) {
     {
         res.render("404");
     });
-
-    //post route for creating new records in the survey table
-//   app.post("/api/quiz", function(req,res)
-//   {
-//     db.Survey.create(
-//       {
-//         userid: req.body.userid,
-//         q01: req.body.q01,
-//         q02: req.body.q02,
-//         q03: req.body.q03,
-//         q04: req.body.q04,
-//         q05: req.body.q05,
-//         q06: req.body.q06,
-//         q07: req.body.q07,
-//         q08: req.body.q08,
-//         q09: req.body.q09,
-//         q10: req.body.q10,
-//         q11: req.body.q11,
-//         genre: req.body.genre
-//       }
-//     ).then(function(dbSurvey) 
-//       {
-//       // We have access to the new todo as an argument inside of the callback function
-//         res.json(dbSurvey);
-//     }
-//     )
-//     .catch(function(err) 
-//     {
-//     // Whenever a validation or flag fails, an error is thrown
-//       res.json(err);
-//     });
-
-//   });
 };
