@@ -190,6 +190,13 @@ h5 {
     text-decoration: none;
   }
 
+  .active-result {
+    background-color: white;
+   }
+   
+   .chosen-results {
+    background-color: white;
+   }
 
 /* ------ Responsive Top Nav ======= */
 
