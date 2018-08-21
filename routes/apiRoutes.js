@@ -251,14 +251,14 @@ module.exports = function(app)
       });
   });
 
-  app.get("/api/:id", function(req, res)
+  app.get("/search/:id", function(req, res)
   {
     //passing key literally instead of with a key/.env files
     //tested using keys/env files and get unauthorized status response
     var client = new igdb("bb21f87f57037dd21618c694818fe183");
 
     //capture the genre value from the link
-    var genre = req.body.id;
+    var genre = req.params.id;
 
     client.games(
     {
@@ -286,7 +286,7 @@ module.exports = function(app)
       else
       {
         //create an array to hold the JSON objects that will be passed to the front end
-        var genreGameObject = [];
+        var searchGameObject = [];
         
         //create an object container for individual game data
         var gameObject = {};
@@ -363,12 +363,12 @@ module.exports = function(app)
           };
 
           //add JSON game object to the array
-          genreGameObject.push(gameObject);
+          searchGameObject.push(gameObject);
 
         }
 
         //send the game object array (JSON) to the front end for rendering
-        res.json(genreGameObject);
+        res.render("search", {searchGameObject});
       }
     }
     //required catch for the igdb api npm package

@@ -6,4 +6,26 @@
         
     </div>
 
+    <div id="searchGameContainer">
+
+      <hr class="blueLine" />
+
+      <div id="new">
+
+        {{#each searchGameObject}}
+
+        <div class="homeList">
+
+          <img src="{{this.image}}" class="gameImage">
+          <h5>{{this.name}}</h5>
+          Release Date: {{this.releaseDate}}<br />
+
+        </div>
+
+        {{/each}}
+
+      </div>
+
+    </div>
+
 </div>
