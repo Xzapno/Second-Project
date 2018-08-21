@@ -83,7 +83,7 @@ $(document).ready(function()
         q02: $("#q02").val(),
         q03: $("#q03").val(),
         q04: $("#q04").val(),
-        qo5: $("#q05").val(),
+        q05: $("#q05").val(),
         q06: $("#q06").val(),
         q07: $("#q07").val(),
         q08: $("#q08").val(),
