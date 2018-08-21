@@ -1,3 +1,5 @@
+$(".chosen-select").chosen();
+
 $(document).ready(function()
 {
     $("#submit").on("click", function(event) 
@@ -92,16 +94,9 @@ $(document).ready(function()
       };
     
       //post the data via the API
-      $.post("/api/quiz", surveyData, function(data) {
-      /*
-         // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-         $("#match-name").text(data.name);
-         $("#match-img").attr("src", data.photo);
-    
-         // Show the modal with the best match
-         $("#results-modal").modal("toggle");
-    
-        });*/
+      $.post("/api/quiz", surveyData, function(data) 
+      {
+
       });
     }
     else 
