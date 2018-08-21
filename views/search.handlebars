@@ -3,28 +3,29 @@
     <div class="container">
 
         {{>navSearch}}
-        
-    </div>
 
-    <div id="searchGameContainer">
 
-      <hr class="blueLine" />
+        <div id="searchGameContainer">
 
-      <div id="new">
+            <hr class="blueLine" />
 
-        {{#each searchGameObject}}
+            <div id="new">
 
-        <div class="homeList">
+                {{#each searchGameObject}}
 
-          <img src="{{this.image}}" class="gameImage">
-          <h5>{{this.name}}</h5>
-          Release Date: {{this.releaseDate}}<br />
+                <div class="homeList">
+
+                    <img src="{{this.image}}" class="gameImage">
+                    <h5>{{this.name}}</h5>
+                    Release Date: {{this.releaseDate}}<br />
+
+                </div>
+
+                {{/each}}
+
+            </div>
 
         </div>
-
-        {{/each}}
-
-      </div>
 
     </div>
 
