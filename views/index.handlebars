@@ -1,0 +1,86 @@
+<div id="home">
+  <div class="container">
+
+    {{>navHome}}
+
+    <div id="popularGamesContainer">
+
+      <img src="images/popular.gif" alt="Popular Games" class="columnHead">
+
+      <hr class="blueLine">
+
+      <div id="popular">
+
+        <div id="popularTarget">
+
+          {{#each popularGameObject}}
+
+          <div class="homeList">
+
+            <img src="{{this.image}}" class="gameImage"><br />
+            <h5>{{this.name}}<br /></h5>
+            Release Date: {{this.releaseDate}}<br /> Rating: {{this.rating}}<br /> Popularity: {{this.popularity}}
+
+          </div>
+
+
+          {{/each}}
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="newGamesContainer">
+
+      <img src="images/newGames.gif" alt="New Games" class="columnHead">
+
+      <hr class="blueLine" />
+
+      <div id="new">
+
+        {{#each newGameObject}}
+
+        <div class="homeList">
+
+          <img src="{{this.image}}" class="gameImage"><br />
+          <h5>{{this.name}}</h5>
+          Release Date: {{this.releaseDate}}<br /> Rating: {{this.rating}}<br /> Popularity: {{this.popularity}}
+
+        </div>
+
+        {{/each}}
+
+      </div>
+
+    </div>
+
+    <div id="gameChoiceHome">
+
+      <hr class="blueLine" /> {{!-- <a href="#" class="gameChoice-btn">Action</a> | <a href="#" class="gameChoice-btn">Adventure</a>
+      | <a href="#" class="gameChoice-btn">Roll Playing</a> | <a href="#" class="gameChoice-btn">Simulation </a> | <a href="#"
+        class="gameChoice-btn">MMO</a>
+      --}}
+
+      <a href="/search/25" class="gameChoice-btn">Hack &amp; Slash</a> | <a href="/search/31" class="gameChoice-btn">Adventure</a>
+      | <a href="/search/12" class="gameChoice-btn">Roll Playing
+      </a> | <a href="/search/12" class="gameChoice-btn">Simulator</a> | <a href="/search/7" class="gameChoice-btn">Music</a>
+
+
+    </div>
+
+    <div id="quizContainer">
+
+      <a href="/quiz" alt="Take our quiz" class="link-btn">Take Our Quiz</a>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+{{!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+<script src="/js/index.js"></script>
