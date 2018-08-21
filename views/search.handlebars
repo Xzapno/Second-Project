@@ -7,13 +7,17 @@
 
         <div id="searchGameContainer">
 
+            <div class="sectionHead">
+                <img src="/images/yourGames.gif" alt="Your Games" class="sectionImage">
+            </div>
+
             <hr class="blueLine" />
 
-            <div id="new">
+            <div>
 
                 {{#each searchGameObject}}
 
-                <div class="homeList">
+                <div class="gameList">
 
                     <img src="{{this.image}}" class="gameImage">
                     <h5>{{this.name}}</h5>
@@ -25,8 +29,11 @@
 
             </div>
 
+            <div class="clear"></div>
+
         </div>
 
     </div>
+
 
 </div>
