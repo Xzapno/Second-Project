@@ -58,7 +58,7 @@ $(document).ready(function()
         });
       };
 
-      var surrveyArray = 
+      var surveyArray = 
       [        
         $("#q01").val(),
         $("#q02").val(),
